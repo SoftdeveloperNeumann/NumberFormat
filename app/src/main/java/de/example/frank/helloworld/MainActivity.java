@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -90,7 +92,10 @@ public class MainActivity extends AppCompatActivity {
         {
             public void onClick(View v){
                 if(firstClick) {
-                    eingabe.setText( Double.toString(doubleValue).replace('.',','));
+                    NumberFormat nf = NumberFormat.getNumberInstance();
+                    nf.setMinimumFractionDigits(2);
+                    String ausgabe =nf.format(doubleValue);//Double.toString(doubleValue).replace('.',',');
+                    eingabe.setText(ausgabe );
                     n.setText(getString(R.string.hallo,ar + eingabe.getText()));
                     eingabe.setVisibility(View.INVISIBLE);
                     anrede.setVisibility(View.INVISIBLE);
