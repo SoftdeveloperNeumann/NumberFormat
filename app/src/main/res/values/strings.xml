@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">HelloWorld</string>
+
+    <string name="hallo">Willkommen %1$s bei der ersten App</string>
+    <string name="hallo2">Nennen sie mir ihren Namen:</string>
+    <string name="btntext">weiter</string>
+    <string name="V_N">Vorname Nachname</string>
+    <string name="values" translatable="false">1234567890.</string>
+
+    <string-array name="anreden">
+        <item>Herr</item>
+        <item>Frau</item>
+    </string-array>
+
+</resources>
